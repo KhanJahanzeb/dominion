@@ -1,0 +1,65 @@
+/*
+  Dominion Health design tokens — verified directly from computed styles
+  and pixel-sampled logo colors on dominionfhc.com (see project notes).
+  Single font family (Montserrat), one brand blue (navy), pill buttons.
+  No invented secondary "action blue" — that color only exists in the
+  live site as a mobile-menu-plugin hover accent, not a brand color.
+*/
+:root {
+  /* core brand — verified */
+  --color-navy: #1b3f82;       /* logo + heading accent + button fill */
+  --color-navy-deep: #143467;  /* hover/pressed state, one step darker */
+  --color-ink: #000000;        /* default heading color on the live site */
+  --color-body: #333333;       /* primary body copy */
+  --color-muted: #666666;      /* secondary/meta text */
+  --color-muted-2: #737373;    /* tertiary text, as seen in service copy */
+  --color-page: #ffffff;       /* page background */
+  --color-surface: #f5f5f5;    /* card/section background, verified */
+  --color-line: #e3e3e3;
+
+  /* type — verified: Montserrat is the confirmed, intentional system font */
+  --font-sans: "Montserrat", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+  /* elegant serif for the hero/departments headline — mirrors the italic serif
+     Dominion already uses for division taglines on its own signage and logo
+     lockups (e.g. "Aesthetics & Wellness", "Primary Care Clinic"). */
+  --font-serif: "Playfair Display", Georgia, "Times New Roman", serif;
+
+  /* spacing (8px base) */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --space-9: 96px;
+
+  /* layout */
+  --container-max: 1200px;
+  --container-wide: 1440px;
+  --container-pad: 24px;
+
+  /* shape — verified pill buttons (23-30px radius), soft cards */
+  --radius-pill: 999px;
+  --radius-card: 16px;
+  --radius-sm: 8px;
+  --radius-btn: 8px;
+
+  /* elevation */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 10px 30px rgba(27, 63, 130, 0.14);
+  --shadow-header: 0 2px 16px rgba(0, 0, 0, 0.06);
+
+  /* motion */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --dur-fast: 160ms;
+  --dur-base: 260ms;
+}
+
+@media (max-width: 640px) {
+  :root {
+    --container-pad: 20px;
+    --space-9: 64px;
+  }
+}

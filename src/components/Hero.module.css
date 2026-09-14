@@ -1,0 +1,123 @@
+.hero {
+  background: linear-gradient(135deg, #fbf7f4 0%, #f4f6fa 55%, #eef1f7 100%);
+  overflow: hidden;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 45% 55%;
+  align-items: stretch;
+  min-height: clamp(460px, 54vw, 640px);
+}
+
+.copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-block: var(--space-8);
+  padding-left: max(var(--container-pad), calc((100vw - var(--container-max)) / 2 + var(--container-pad)));
+  padding-right: var(--space-6);
+  animation: heroFadeUp 700ms var(--ease-out) both;
+}
+
+.title {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: clamp(2.1rem, 1.5rem + 2.4vw, 3.2rem);
+  line-height: 1.15;
+  color: var(--color-navy);
+}
+
+.dek {
+  margin-top: var(--space-5);
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: var(--color-body);
+  max-width: 46ch;
+}
+
+.cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-start;
+  margin-top: var(--space-6);
+  background: var(--color-navy);
+  color: #ffffff;
+  text-decoration: none;
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 15px 32px;
+  border-radius: var(--radius-btn);
+  transition: background-color var(--dur-fast) var(--ease-out),
+    transform var(--dur-fast) var(--ease-out);
+}
+
+.cta:hover {
+  background: var(--color-navy-deep);
+  transform: translateY(-1px);
+}
+
+.imageWrap {
+  position: relative;
+  animation: heroFadeIn 900ms var(--ease-out) both;
+  animation-delay: 100ms;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+@keyframes heroFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes heroFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .copy,
+  .imageWrap {
+    animation: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+    min-height: 0;
+  }
+
+  .copy {
+    padding-inline: var(--container-pad);
+    padding-top: var(--space-7);
+    padding-bottom: var(--space-6);
+  }
+
+  .imageWrap {
+    height: clamp(240px, 46vw, 340px);
+  }
+}
+
+@media (max-width: 460px) {
+  .cta {
+    width: 100%;
+  }
+}

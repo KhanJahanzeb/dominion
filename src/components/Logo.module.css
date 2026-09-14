@@ -1,0 +1,17 @@
+.logo {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo img {
+  height: 58px;
+  width: auto;
+  transition: height var(--dur-base) var(--ease-out);
+}
+
+@media (max-width: 640px) {
+  .logo img {
+    height: 46px;
+  }
+}
