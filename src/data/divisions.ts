@@ -1,8 +1,8 @@
 import { Stethoscope, Flower2, Dna, Users, Microscope, ScanLine, type LucideIcon } from "lucide-react";
-import primaryCareImg from "../assets/primary-care/dr-agha.jpg";
+import primaryCareImg from "../assets/primary-care/primary-care-clinic-reception.jpg";
 import aestheticsImg from "../assets/aesthetics/aesthetics-reception.jpg";
 import hormonesImg from "../assets/hormones/hormones-wellness.webp";
-import accessCareImg from "../assets/providers/aaron-deleon.jpg";
+import accessCareImg from "../assets/providers/access-care-membership.jpg";
 import researchImg from "../assets/research/research-lab.jpg";
 import imagingImg from "../assets/imaging/thyroid-ultrasound.jpg";
 
@@ -58,7 +58,7 @@ export const divisions: Division[] = [
     description: "Enhance your natural beauty and well-being.",
     image: aestheticsImg,
     icon: Flower2,
-    url: "https://dominionfhc.com/index.php/wellness-and-aesthetics/",
+    url: "https://dominionaw.com/",
     external: true,
     status: "active",
     enabled: true,

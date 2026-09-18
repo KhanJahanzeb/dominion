@@ -1,5 +1,4 @@
 import { useEffect, useState, type MouseEvent } from "react";
-import { UserRound } from "lucide-react";
 import Container from "./Container";
 import Logo from "./Logo";
 import styles from "./Header.module.css";
@@ -9,8 +8,6 @@ const NAV_LINKS = [
   { href: "#departments", label: "Our Departments" },
   { href: "#contact", label: "Contact" },
 ];
-
-const PATIENT_PORTAL_URL = "https://8042-1.portal.athenahealth.com/";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -73,17 +70,6 @@ export default function Header() {
         </nav>
 
         <div className={styles.actions}>
-          <a
-            href={PATIENT_PORTAL_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.portalCta}
-          >
-            <span className={styles.portalIcon} aria-hidden="true">
-              <UserRound size={16} strokeWidth={2} />
-            </span>
-            Patient Portal
-          </a>
           <button
             type="button"
             className={styles.menuToggle}
@@ -111,18 +97,6 @@ export default function Header() {
           ))}
         </nav>
         <div className={styles.drawerFooter}>
-          <a
-            href={PATIENT_PORTAL_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.drawerCta}
-            onClick={() => setMenuOpen(false)}
-          >
-            <span className={styles.portalIcon} aria-hidden="true">
-              <UserRound size={16} strokeWidth={2} />
-            </span>
-            Patient Portal
-          </a>
           <a href="tel:12109448855" className={styles.drawerPhone}>
             +1 210 944 8855
           </a>

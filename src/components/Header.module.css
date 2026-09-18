@@ -64,39 +64,6 @@
   gap: var(--space-4);
 }
 
-.portalCta {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  background: var(--color-navy);
-  color: #ffffff;
-  text-decoration: none;
-  font-family: var(--font-sans);
-  font-size: 0.9rem;
-  font-weight: 700;
-  padding: 12px 22px;
-  border-radius: 10px;
-  white-space: nowrap;
-  transition: background-color var(--dur-fast) var(--ease-out),
-    transform var(--dur-fast) var(--ease-out);
-}
-
-.portalCta:hover {
-  background: var(--color-navy-deep);
-  transform: translateY(-1px);
-}
-
-.portalIcon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 26px;
-  height: 26px;
-  border-radius: 50%;
-  border: 1.5px solid rgba(255, 255, 255, 0.85);
-  flex-shrink: 0;
-}
-
 .menuToggle {
   display: none;
   background: none;
@@ -152,8 +119,7 @@
     box-shadow: var(--shadow-header);
   }
 
-  .nav,
-  .portalCta {
+  .nav {
     display: none;
   }
 
@@ -205,22 +171,6 @@
     gap: var(--space-4);
     align-items: flex-start;
     padding-top: var(--space-6);
-  }
-
-  .drawerCta {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    width: 100%;
-    background: var(--color-navy);
-    color: #ffffff;
-    text-decoration: none;
-    font-family: var(--font-sans);
-    font-size: 1rem;
-    font-weight: 700;
-    padding: 14px 22px;
-    border-radius: 10px;
   }
 
   .drawerPhone {

@@ -57,6 +57,32 @@ export default function Footer() {
             <li>
               <a href="tel:12109448855">+1 210 944 8855</a>
             </li>
+            <li>
+              <a href="mailto:admin@dominion.health">admin@dominion.health</a>
+            </li>
+          </ul>
+        </div>
+
+        <div className={styles.col}>
+          <h3 className={styles.heading}>Our Locations</h3>
+          <ul className={styles.addressList}>
+            <li>
+              <strong>Leon Springs</strong>
+              <span>23119 IH-10W St. 904, San Antonio, TX 78257</span>
+              <span>23119 W I 10 Blg 16 San Antonio TX 78257</span>
+            </li>
+            <li>
+              <strong>Westover Hills</strong>
+              <span>5715 Rogers Rd St 117, San Antonio, TX 78251</span>
+            </li>
+            <li>
+              <strong>Medical Center</strong>
+              <span>9647 Huebner Rd, San Antonio, TX 78240</span>
+            </li>
+            <li>
+              <strong>Stone Oak</strong>
+              <span>4553 N Loop 1604 W Suite 1119, San Antonio, TX 78249</span>
+            </li>
           </ul>
         </div>
       </Container>
